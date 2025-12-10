@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul PPKN - Otonomi Daerah & Good and Clean Government</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe5f3 25%, #ffd4ed 50%, #ffc4e8 75%, #ffb3e3 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #5a3a52;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff6eb4 0%, #ff8cc7 50%, #ffa8d9 100%);
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '✿';
+            position: absolute;
+            font-size: 100px;
+            color: rgba(255, 255, 255, 0.1);
+            top: -20px;
+            left: 20px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .header::after {
+            content: '❀';
+            position: absolute;
+            font-size: 80px;
+            color: rgba(255, 255, 255, 0.1);
+            bottom: -10px;
+            right: 30px;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            color: #fff5f9;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .nav-container {
+            background: linear-gradient(90deg, #ffe5f3 0%, #fff0f7 100%);
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            border-bottom: 3px solid #ffb3e3;
+        }
+        
+        .stage-btn {
+            padding: 12px 25px;
+            background: white;
+            border: 2px solid #ff8cc7;
+            color: #ff6eb4;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .stage-btn:hover {
+            background: linear-gradient(135deg, #ff6eb4, #ff8cc7);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 110, 180, 0.4);
+        }
+        
+        .stage-btn.active {
+            background: linear-gradient(135deg, #ff6eb4, #ff8cc7);
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 110, 180, 0.4);
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .stage {
+            display: none;
+        }
+        
+        .stage.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .stage-title {
+            font-family: 'Playfair Display', serif;
+            color: #ff6eb4;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .stage-title::after {
+            content: '✿ ❀ ✿';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.5em;
+            color: #ffa8d9;
+        }
+        
+        .summary {
+            background: linear-gradient(135deg, #fff5f9 0%, #ffe5f3 100%);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            border-left: 5px solid #ff8cc7;
+            box-shadow: 0 5px 15px rgba(255, 110, 180, 0.1);
+        }
+        
+        .summary h3 {
+            color: #ff6eb4;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .summary ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .summary li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .summary li::before {
+            content: '❀';
+            position: absolute;
+            left: 0;
+            color: #ff8cc7;
+            font-size: 1.2em;
+        }
+        
+        .questions {
+            margin-top: 30px;
+        }
+        
+        .question-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(255, 110, 180, 0.1);
+            border: 2px solid #ffe5f3;
+            transition: all 0.3s ease;
+        }
+        
+        .question-card:hover {
+            box-shadow: 0 8px 25px rgba(255, 110, 180, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .question-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6eb4, #ff8cc7);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+        
+        .question-text {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #5a3a52;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .option {
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #fff5f9 0%, #ffe5f3 100%);
+            border: 2px solid #ffe5f3;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+        }
+        
+        .option:hover {
+            background: linear-gradient(135deg, #ffebf5, #ffd4ed);
+            border-color: #ff8cc7;
+            transform: translateX(5px);
+        }
+        
+        .option input[type="radio"] {
+            margin-right: 12px;
+            cursor: pointer;
+            accent-color: #ff6eb4;
+            width: 18px;
+            height: 18px;
+        }
+        
+        .option.correct {
+            background: linear-gradient(135deg, #d4f4dd, #b8f0c8);
+            border-color: #4caf50;
+            animation: correctPulse 0.5s ease;
+        }
+        
+        .option.incorrect {
+            background: linear-gradient(135deg, #ffd4d4, #ffb8b8);
+            border-color: #ff6b6b;
+            animation: incorrectShake 0.5s ease;
+        }
+        
+        @keyframes correctPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        @keyframes incorrectShake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        
+        .submit-btn, .reset-btn {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ff6eb4, #ff8cc7);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0 5px 15px rgba(255, 110, 180, 0.3);
+        }
+        
+        .submit-btn:hover, .reset-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 110, 180, 0.4);
+        }
+        
+        .reset-btn {
+            background: linear-gradient(135deg, #ffa8d9, #ffb3e3);
+            margin-top: 10px;
+        }
+        
+        .result {
+            background: linear-gradient(135deg, #fff5f9, #ffe5f3);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 30px;
+            border: 3px solid #ff8cc7;
+            display: none;
+        }
+        
+        .result.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .result h3 {
+            font-family: 'Playfair Display', serif;
+            color: #ff6eb4;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        
+        .score {
+            font-size: 3em;
+            font-weight: 700;
+            color: #ff6eb4;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(255, 110, 180, 0.2);
+        }
+        
+        .score-text {
+            font-size: 1.2em;
+            color: #5a3a52;
+            margin-top: 10px;
+        }
+        
+        .feedback {
+            margin-top: 15px;
+            font-size: 1.1em;
+            color: #7a5a72;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .subtitle {
+                font-size: 0.9em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .stage-title {
+                font-size: 1.5em;
+            }
+            
+            .question-text {
+                font-size: 1em;
+            }
+            
+            .nav-container {
+                padding: 15px;
+            }
+            
+            .stage-btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+        
+        .info-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffa8d9, #ffb3e3);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-left: 10px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✿ Modul PPKN ✿</h1>
+            <p class="subtitle">Otonomi Daerah serta Good and Clean Government</p>
+        </div>
+        
+        <nav class="nav-container">
+            <button class="stage-btn active" onclick="showStage(1)">Tahap 1</button>
+            <button class="stage-btn" onclick="showStage(2)">Tahap 2</button>
+            <button class="stage-btn" onclick="showStage(3)">Tahap 3</button>
+            <button class="stage-btn" onclick="showStage(4)">Tahap 4</button>
+            <button class="stage-btn" onclick="showStage(5)">Tahap 5</button>
+        </nav>
+        
+        <div class="content">
+            <!-- TAHAP 1 -->
+            <div id="stage1" class="stage active">
+                <h2 class="stage-title">Tahap 1: Konsep Dasar Otonomi Daerah</h2>
+                
+                <div class="summary">
+                    <h3>Ringkasan Materi</h3>
+                    <ul>
+                        <li>Otonomi daerah adalah hak, wewenang, dan kewajiban daerah otonom untuk mengatur dan mengurus sendiri urusan pemerintahan dan kepentingan masyarakat setempat</li>
+                        <li>Indonesia memiliki sejarah panjang dalam sistem pemerintahan daerah sejak masa kerajaan hingga era reformasi</li>
+                        <li>Otonomi daerah bertujuan untuk meningkatkan kesejahteraan masyarakat, pelayanan publik, dan daya saing daerah</li>
+                        <li>Desentralisasi adalah penyerahan wewenang pemerintahan dari pusat ke daerah otonom</li>
+                    </ul>
+                </div>
+                
+                <div class="questions">
+                    <div class="question-card">
+                        <span class="question-number">Soal 1</span>
+                        <p class="question-text">Apa yang dimaksud dengan otonomi daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1" value="A">
+                                <span>A. Kewenangan pemerintah pusat untuk mengatur seluruh daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="B">
+                                <span>B. Hak daerah untuk memisahkan diri dari negara</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="C" data-correct>
+                                <span>C. Hak, wewenang, dan kewajiban daerah untuk mengatur urusan sendiri</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="D">
+                                <span>D. Sistem pemerintahan terpusat tanpa keterlibatan daerah</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 2</span>
+                        <p class="question-text">Kapan Indonesia mulai menerapkan otonomi daerah secara signifikan?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2" value="A">
+                                <span>A. Masa Orde Lama (1945-1966)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="B">
+                                <span>B. Masa Orde Baru (1966-1998)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="C" data-correct>
+                                <span>C. Era Reformasi (pasca 1998)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="D">
+                                <span>D. Masa penjajahan Belanda</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 3</span>
+                        <p class="question-text">Apa tujuan utama dari penerapan otonomi daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3" value="A">
+                                <span>A. Memudahkan kontrol pemerintah pusat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="B" data-correct>
+                                <span>B. Meningkatkan kesejahteraan dan pelayanan masyarakat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="C">
+                                <span>C. Mengurangi peran pemerintah daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="D">
+                                <span>D. Memperkuat sentralisasi kekuasaan</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 4</span>
+                        <p class="question-text">Apa yang dimaksud dengan desentralisasi?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4" value="A">
+                                <span>A. Pemusatan kekuasaan di tingkat pusat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="B" data-correct>
+                                <span>B. Penyerahan wewenang dari pusat ke daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="C">
+                                <span>C. Pembagian wilayah administratif</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="D">
+                                <span>D. Penghapusan pemerintah daerah</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 5</span>
+                        <p class="question-text">Berapa jumlah pulau yang dimiliki Indonesia menurut modul?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5" value="A">
+                                <span>A. 13.000 pulau</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="B" data-correct>
+                                <span>B. 17.000 pulau</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="C">
+                                <span>C. 20.000 pulau</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="D">
+                                <span>D. 25.000 pulau</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 6</span>
+                        <p class="question-text">Apa yang menjadi tantangan dalam penerapan otonomi daerah di Indonesia?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q6" value="A">
+                                <span>A. Wilayah yang terlalu kecil</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6" value="B">
+                                <span>B. Populasi yang sedikit</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6" value="C" data-correct>
+                                <span>C. Keberagaman kondisi geografis dan sosial budaya</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6" value="D">
+                                <span>D. Terlalu banyak sumber daya alam</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 7</span>
+                        <p class="question-text">Siapa yang memiliki wewenang dalam otonomi daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q7" value="A">
+                                <span>A. Presiden dan Menteri</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q7" value="B">
+                                <span>B. DPR RI</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q7" value="C" data-correct>
+                                <span>C. Pemerintah daerah dan DPRD</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q7" value="D">
+                                <span>D. Mahkamah Agung</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 8</span>
+                        <p class="question-text">Apa manfaat otonomi daerah bagi masyarakat?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q8" value="A" data-correct>
+                                <span>A. Pelayanan publik yang lebih dekat dan responsif</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q8" value="B">
+                                <span>B. Birokrasi yang lebih rumit</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q8" value="C">
+                                <span>C. Ketergantungan pada pemerintah pusat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q8" value="D">
+                                <span>D. Pengurangan partisipasi masyarakat</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 9</span>
+                        <p class="question-text">Apa yang dimaksud dengan daerah otonom?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q9" value="A">
+                                <span>A. Daerah yang tidak terikat dengan negara</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q9" value="B" data-correct>
+                                <span>B. Kesatuan masyarakat hukum dengan batas wilayah tertentu yang berwenang mengatur urusan pemerintahan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q9" value="C">
+                                <span>C. Wilayah yang dikuasai pemerintah pusat sepenuhnya</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q9" value="D">
+                                <span>D. Daerah tanpa pemerintahan</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 10</span>
+                        <p class="question-text">Mengapa otonomi daerah penting bagi Indonesia?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q10" value="A">
+                                <span>A. Untuk memperkuat sentralisasi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q10" value="B" data-correct>
+                                <span>B. Untuk mengakomodasi keberagaman dan mempercepat pembangunan daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q10" value="C">
+                                <span>C. Untuk mengurangi peran masyarakat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q10" value="D">
+                                <span>D. Untuk memisahkan daerah dari pusat</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="submit-btn" onclick="checkAnswers(1)">Periksa Jawaban ✓</button>
+                <button class="reset-btn" onclick="resetStage(1)">Ulangi Tahap Ini ↻</button>
+                
+                <div id="result1" class="result"></div>
+            </div>
+            
+            <!-- TAHAP 2 -->
+            <div id="stage2" class="stage">
+                <h2 class="stage-title">Tahap 2: Prinsip-Prinsip Otonomi Daerah</h2>
+                
+                <div class="summary">
+                    <h3>Ringkasan Materi</h3>
+                    <ul>
+                        <li>Otonomi daerah didasarkan pada prinsip demokrasi, pemerataan, keadilan, dan potensi keanekaragaman daerah</li>
+                        <li>Terdapat pembagian urusan pemerintahan antara pusat, provinsi, dan kabupaten/kota</li>
+                        <li>Prinsip subsidiaritas: urusan pemerintahan dilaksanakan oleh tingkat pemerintahan yang paling dekat dengan masyarakat</li>
+                        <li>Asas dekonsentrasi dan tugas pembantuan sebagai pelengkap desentralisasi</li>
+                    </ul>
+                </div>
+                
+                <div class="questions">
+                    <div class="question-card">
+                        <span class="question-number">Soal 1</span>
+                        <p class="question-text">Apa yang dimaksud dengan prinsip subsidiaritas?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q11" value="A">
+                                <span>A. Semua urusan dikelola oleh pemerintah pusat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q11" value="B" data-correct>
+                                <span>B. Urusan pemerintahan dilaksanakan oleh tingkat yang paling dekat dengan masyarakat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q11" value="C">
+                                <span>C. Pemerintah daerah tidak memiliki wewenang</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q11" value="D">
+                                <span>D. Hanya provinsi yang mengelola urusan pemerintahan</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 2</span>
+                        <p class="question-text">Apa yang dimaksud dengan dekonsentrasi?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q12" value="A" data-correct>
+                                <span>A. Pelimpahan wewenang dari pemerintah pusat kepada gubernur sebagai wakil pemerintah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q12" value="B">
+                                <span>B. Penyerahan urusan kepada daerah otonom</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q12" value="C">
+                                <span>C. Pemberian bantuan dana dari pusat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q12" value="D">
+                                <span>D. Penghapusan kewenangan daerah</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 3</span>
+                        <p class="question-text">Siapa yang memiliki wewenang dalam urusan pemerintahan absolut?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q13" value="A" data-correct>
+                                <span>A. Pemerintah pusat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q13" value="B">
+                                <span>B. Pemerintah provinsi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q13" value="C">
+                                <span>C. Pemerintah kabupaten/kota</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q13" value="D">
+                                <span>D. DPRD</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 4</span>
+                        <p class="question-text">Apa yang termasuk dalam urusan pemerintahan absolut?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q14" value="A">
+                                <span>A. Pendidikan dan kesehatan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q14" value="B" data-correct>
+                                <span>B. Politik luar negeri, pertahanan, dan moneter</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q14" value="C">
+                                <span>C. Perhubungan dan perdagangan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q14" value="D">
+                                <span>D. Pertanian dan perikanan</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 5</span>
+                        <p class="question-text">Apa yang dimaksud dengan tugas pembantuan?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q15" value="A">
+                                <span>A. Bantuan keuangan dari luar negeri</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q15" value="B" data-correct>
+                                <span>B. Penugasan dari pemerintah pusat kepada daerah untuk melaksanakan urusan tertentu</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q15" value="C">
+                                <span>C. Pinjaman dana untuk pembangunan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q15" value="D">
+                                <span>D. Pengurangan beban kerja pemerintah</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 6</span>
+                        <p class="question-text">Prinsip apa yang menjamin pemerataan pembangunan di seluruh Indonesia?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q16" value="A" data-correct>
+                                <span>A. Prinsip keadilan dan pemerataan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q16" value="B">
+                                <span>B. Prinsip kompetisi bebas</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q16" value="C">
+                                <span>C. Prinsip kapitalisasi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q16" value="D">
+                                <span>D. Prinsip sentralisasi</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 7</span>
+                        <p class="question-text">Apa yang dimaksud dengan urusan konkuren?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q17" value="A">
+                                <span>A. Urusan yang hanya dimiliki pemerintah pusat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q17" value="B" data-correct>
+                                <span>B. Urusan yang dibagi antara pemerintah pusat, provinsi, dan kabupaten/kota</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q17" value="C">
+                                <span>C. Urusan yang tidak boleh dikelola daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q17" value="D">
+                                <span>D. Urusan yang dikelola swasta</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 8</span>
+                        <p class="question-text">Mengapa prinsip demokrasi penting dalam otonomi daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q18" value="A" data-correct>
+                                <span>A. Untuk memastikan partisipasi masyarakat dalam pengambilan keputusan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q18" value="B">
+                                <span>B. Untuk memperkuat kekuasaan kepala daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q18" value="C">
+                                <span>C. Untuk mengurangi transparansi pemerintahan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q18" value="D">
+                                <span>D. Untuk membatasi hak masyarakat</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 9</span>
+                        <p class="question-text">Apa peran DPRD dalam otonomi daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q19" value="A">
+                                <span>A. Hanya sebagai penasehat kepala daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q19" value="B" data-correct>
+                                <span>B. Legislasi, anggaran, dan pengawasan pemerintah daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q19" value="C">
+                                <span>C. Menjalankan pemerintahan sehari-hari</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q19" value="D">
+                                <span>D. Mengatur hubungan luar negeri daerah</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 10</span>
+                        <p class="question-text">Apa yang dimaksud dengan potensi keanekaragaman daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q20" value="A">
+                                <span>A. Semua daerah harus memiliki karakteristik yang sama</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q20" value="B" data-correct>
+                                <span>B. Pengakuan terhadap perbedaan dan keunikan setiap daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q20" value="C">
+                                <span>C. Pembatasan perbedaan antar daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q20" value="D">
+                                <span>D. Penyeragaman budaya daerah</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="submit-btn" onclick="checkAnswers(2)">Periksa Jawaban ✓</button>
+                <button class="reset-btn" onclick="resetStage(2)">Ulangi Tahap Ini ↻</button>
+                
+                <div id="result2" class="result"></div>
+            </div>
+            
+            <!-- TAHAP 3 -->
+            <div id="stage3" class="stage">
+                <h2 class="stage-title">Tahap 3: Good and Clean Government</h2>
+                
+                <div class="summary">
+                    <h3>Ringkasan Materi</h3>
+                    <ul>
+                        <li>Good and Clean Government adalah penyelenggaraan pemerintahan yang baik, bersih, dan bebas dari korupsi</li>
+                        <li>Prinsip-prinsip good governance meliputi transparansi, akuntabilitas, responsivitas, efisiensi, dan partisipasi</li>
+                        <li>Clean government menekankan pada pemberantasan korupsi, kolusi, dan nepotisme (KKN)</li>
+                        <li>Pemerintahan yang baik menciptakan kepercayaan publik dan meningkatkan kualitas pelayanan</li>
+                    </ul>
+                </div>
+                
+                <div class="questions">
+                    <div class="question-card">
+                        <span class="question-number">Soal 1</span>
+                        <p class="question-text">Apa yang dimaksud dengan Good and Clean Government?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q21" value="A">
+                                <span>A. Pemerintahan yang hanya fokus pada pembangunan fisik</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q21" value="B" data-correct>
+                                <span>B. Pemerintahan yang baik, bersih, dan bebas dari korupsi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q21" value="C">
+                                <span>C. Pemerintahan yang tertutup dari publik</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q21" value="D">
+                                <span>D. Pemerintahan yang otoriter</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 2</span>
+                        <p class="question-text">Apa yang dimaksud dengan transparansi dalam pemerintahan?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q22" value="A" data-correct>
+                                <span>A. Keterbukaan informasi tentang proses dan kebijakan pemerintahan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q22" value="B">
+                                <span>B. Merahasiakan semua dokumen pemerintah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q22" value="C">
+                                <span>C. Membatasi akses publik terhadap informasi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q22" value="D">
+                                <span>D. Hanya memberikan informasi kepada pejabat tinggi</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 3</span>
+                        <p class="question-text">Apa kepanjangan dari KKN?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q23" value="A">
+                                <span>A. Kuliah Kerja Nasional</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q23" value="B" data-correct>
+                                <span>B. Korupsi, Kolusi, dan Nepotisme</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q23" value="C">
+                                <span>C. Koordinasi Kerja Negara</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q23" value="D">
+                                <span>D. Kebijakan Keuangan Nasional</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 4</span>
+                        <p class="question-text">Apa yang dimaksud dengan akuntabilitas?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q24" value="A">
+                                <span>A. Kewenangan untuk mengambil keputusan sepihak</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q24" value="B" data-correct>
+                                <span>B. Pertanggungjawaban atas tindakan dan keputusan pemerintah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q24" value="C">
+                                <span>C. Pembatasan wewenang pemerintah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q24" value="D">
+                                <span>D. Penghapusan sistem kontrol</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 5</span>
+                        <p class="question-text">Mengapa responsivitas penting dalam pemerintahan?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q25" value="A" data-correct>
+                                <span>A. Untuk menanggapi kebutuhan dan aspirasi masyarakat dengan cepat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q25" value="B">
+                                <span>B. Untuk mengabaikan keluhan masyarakat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q25" value="C">
+                                <span>C. Untuk memperlambat proses pelayanan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q25" value="D">
+                                <span>D. Untuk membatasi komunikasi dengan publik</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 6</span>
+                        <p class="question-text">Apa manfaat dari clean government?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q26" value="A">
+                                <span>A. Meningkatkan praktik korupsi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q26" value="B" data-correct>
+                                <span>B. Meningkatkan kepercayaan publik dan efisiensi pemerintahan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q26" value="C">
+                                <span>C. Mengurangi partisipasi masyarakat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q26" value="D">
+                                <span>D. Mempersulit akses pelayanan publik</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 7</span>
+                        <p class="question-text">Apa yang dimaksud dengan efisiensi dalam pemerintahan?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q27" value="A">
+                                <span>A. Pemborosan anggaran dan sumber daya</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q27" value="B" data-correct>
+                                <span>B. Penggunaan sumber daya secara optimal untuk hasil maksimal</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q27" value="C">
+                                <span>C. Birokrasi yang berbelit-belit</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q27" value="D">
+                                <span>D. Penundaan pelayanan publik</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 8</span>
+                        <p class="question-text">Apa peran partisipasi masyarakat dalam good governance?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q28" value="A" data-correct>
+                                <span>A. Memberikan masukan dan mengawasi jalannya pemerintahan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q28" value="B">
+                                <span>B. Hanya menerima kebijakan tanpa komentar</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q28" value="C">
+                                <span>C. Tidak ada peran sama sekali</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q28" value="D">
+                                <span>D. Mengganggu jalannya pemerintahan</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 9</span>
+                        <p class="question-text">Bagaimana cara mewujudkan clean government?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q29" value="A">
+                                <span>A. Meningkatkan korupsi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q29" value="B" data-correct>
+                                <span>B. Menegakkan hukum, meningkatkan transparansi, dan pengawasan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q29" value="C">
+                                <span>C. Mengurangi sistem kontrol</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q29" value="D">
+                                <span>D. Merahasiakan seluruh kebijakan</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 10</span>
+                        <p class="question-text">Apa dampak korupsi terhadap pembangunan?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q30" value="A">
+                                <span>A. Mempercepat pembangunan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q30" value="B" data-correct>
+                                <span>B. Menghambat pembangunan dan merugikan masyarakat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q30" value="C">
+                                <span>C. Tidak ada dampak</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q30" value="D">
+                                <span>D. Meningkatkan kesejahteraan</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="submit-btn" onclick="checkAnswers(3)">Periksa Jawaban ✓</button>
+                <button class="reset-btn" onclick="resetStage(3)">Ulangi Tahap Ini ↻</button>
+                
+                <div id="result3" class="result"></div>
+            </div>
+            
+            <!-- TAHAP 4 -->
+            <div id="stage4" class="stage">
+                <h2 class="stage-title">Tahap 4: Implementasi Good Governance</h2>
+                
+                <div class="summary">
+                    <h3>Ringkasan Materi</h3>
+                    <ul>
+                        <li>Implementasi good governance memerlukan komitmen dari semua pihak: pemerintah, swasta, dan masyarakat</li>
+                        <li>Reformasi birokrasi merupakan kunci dalam mewujudkan good governance</li>
+                        <li>Teknologi informasi dapat meningkatkan transparansi dan efisiensi pelayanan publik (e-government)</li>
+                        <li>Pengawasan internal dan eksternal penting untuk memastikan akuntabilitas</li>
+                    </ul>
+                </div>
+                
+                <div class="questions">
+                    <div class="question-card">
+                        <span class="question-number">Soal 1</span>
+                        <p class="question-text">Apa yang dimaksud dengan reformasi birokrasi?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q31" value="A">
+                                <span>A. Penambahan jumlah pegawai negeri</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q31" value="B" data-correct>
+                                <span>B. Perubahan mendasar dalam sistem birokrasi untuk meningkatkan kinerja</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q31" value="C">
+                                <span>C. Pengurangan gaji pegawai</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q31" value="D">
+                                <span>D. Pembuatan peraturan baru yang rumit</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 2</span>
+                        <p class="question-text">Apa yang dimaksud dengan e-government?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q32" value="A" data-correct>
+                                <span>A. Pemanfaatan teknologi informasi dalam pelayanan pemerintahan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q32" value="B">
+                                <span>B. Pemerintahan yang hanya online</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q32" value="C">
+                                <span>C. Penghapusan kantor pemerintah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q32" value="D">
+                                <span>D. Privatisasi layanan publik</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 3</span>
+                        <p class="question-text">Siapa yang bertanggung jawab dalam pengawasan eksternal pemerintahan?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q33" value="A">
+                                <span>A. Hanya presiden</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q33" value="B" data-correct>
+                                <span>B. Lembaga pengawas seperti BPK, KPK, dan masyarakat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q33" value="C">
+                                <span>C. Tidak ada yang mengawasi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q33" value="D">
+                                <span>D. Hanya pegawai internal</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 4</span>
+                        <p class="question-text">Apa manfaat e-government bagi masyarakat?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q34" value="A" data-correct>
+                                <span>A. Pelayanan lebih cepat, mudah, dan transparan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q34" value="B">
+                                <span>B. Mempersulit akses layanan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q34" value="C">
+                                <span>C. Menambah biaya pelayanan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q34" value="D">
+                                <span>D. Mengurangi transparansi</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 5</span>
+                        <p class="question-text">Apa peran BPK dalam pemerintahan?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q35" value="A">
+                                <span>A. Membuat undang-undang</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q35" value="B" data-correct>
+                                <span>B. Memeriksa pengelolaan dan tanggung jawab keuangan negara</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q35" value="C">
+                                <span>C. Menjalankan pemerintahan sehari-hari</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q35" value="D">
+                                <span>D. Mengangkat pegawai negeri</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 6</span>
+                        <p class="question-text">Apa yang dimaksud dengan merit system dalam birokrasi?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q36" value="A" data-correct>
+                                <span>A. Sistem pengelolaan ASN berdasarkan kualifikasi, kompetensi, dan kinerja</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q36" value="B">
+                                <span>B. Pengangkatan berdasarkan hubungan keluarga</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q36" value="C">
+                                <span>C. Promosi berdasarkan senioritas saja</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q36" value="D">
+                                <span>D. Sistem tanpa evaluasi kinerja</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 7</span>
+                        <p class="question-text">Mengapa komitmen pimpinan penting dalam good governance?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q37" value="A" data-correct>
+                                <span>A. Memberikan contoh dan mendorong implementasi prinsip good governance</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q37" value="B">
+                                <span>B. Untuk menguasai seluruh kewenangan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q37" value="C">
+                                <span>C. Tidak berpengaruh sama sekali</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q37" value="D">
+                                <span>D. Untuk menghindari tanggung jawab</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 8</span>
+                        <p class="question-text">Apa yang dimaksud dengan whistle blower?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q38" value="A">
+                                <span>A. Orang yang melakukan korupsi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q38" value="B" data-correct>
+                                <span>B. Orang yang melaporkan pelanggaran atau kejahatan dalam organisasi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q38" value="C">
+                                <span>C. Pejabat yang mengawasi keuangan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q38" value="D">
+                                <span>D. Anggota kepolisian</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 9</span>
+                        <p class="question-text">Apa hambatan dalam implementasi good governance?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q39" value="A">
+                                <span>A. Terlalu banyak transparansi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q39" value="B" data-correct>
+                                <span>B. Budaya korupsi, resistensi perubahan, dan lemahnya penegakan hukum</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q39" value="C">
+                                <span>C. Partisipasi masyarakat yang terlalu tinggi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q39" value="D">
+                                <span>D. Sistem yang terlalu sederhana</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 10</span>
+                        <p class="question-text">Apa peran sektor swasta dalam good governance?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q40" value="A">
+                                <span>A. Tidak ada peran</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q40" value="B" data-correct>
+                                <span>B. Berpartisipasi dalam pembangunan dan menerapkan prinsip good corporate governance</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q40" value="C">
+                                <span>C. Hanya mencari keuntungan tanpa tanggung jawab</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q40" value="D">
+                                <span>D. Mengambil alih peran pemerintah</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="submit-btn" onclick="checkAnswers(4)">Periksa Jawaban ✓</button>
+                <button class="reset-btn" onclick="resetStage(4)">Ulangi Tahap Ini ↻</button>
+                
+                <div id="result4" class="result"></div>
+            </div>
+            
+            <!-- TAHAP 5 -->
+            <div id="stage5" class="stage">
+                <h2 class="stage-title">Tahap 5: Tantangan dan Masa Depan</h2>
+                
+                <div class="summary">
+                    <h3>Ringkasan Materi</h3>
+                    <ul>
+                        <li>Tantangan otonomi daerah meliputi kesenjangan antar daerah, kapasitas SDM, dan koordinasi antar tingkat pemerintahan</li>
+                        <li>Diperlukan peningkatan kapasitas pemerintah daerah dalam pengelolaan keuangan dan pelayanan publik</li>
+                        <li>Masa depan otonomi daerah bergantung pada komitmen untuk terus memperbaiki sistem dan meningkatkan kualitas governance</li>
+                        <li>Peran aktif masyarakat sangat penting dalam mengawasi dan mendorong pemerintahan yang lebih baik</li>
+                    </ul>
+                </div>
+                
+                <div class="questions">
+                    <div class="question-card">
+                        <span class="question-number">Soal 1</span>
+                        <p class="question-text">Apa tantangan utama dalam otonomi daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q41" value="A">
+                                <span>A. Terlalu banyak sumber daya</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q41" value="B" data-correct>
+                                <span>B. Kesenjangan pembangunan dan kapasitas SDM yang terbatas</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q41" value="C">
+                                <span>C. Kelebihan anggaran daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q41" value="D">
+                                <span>D. Tidak ada tantangan sama sekali</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 2</span>
+                        <p class="question-text">Apa yang dimaksud dengan kesenjangan fiskal?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q42" value="A" data-correct>
+                                <span>A. Perbedaan kemampuan keuangan antar daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q42" value="B">
+                                <span>B. Kesamaan pendapatan semua daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q42" value="C">
+                                <span>C. Surplus anggaran di semua daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q42" value="D">
+                                <span>D. Tidak ada perbedaan keuangan</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 3</span>
+                        <p class="question-text">Bagaimana cara mengatasi kesenjangan antar daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q43" value="A">
+                                <span>A. Membiarkan daerah berkembang sendiri</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q43" value="B" data-correct>
+                                <span>B. Dana perimbangan, pembangunan infrastruktur, dan peningkatan kapasitas</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q43" value="C">
+                                <span>C. Memusatkan pembangunan di satu daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q43" value="D">
+                                <span>D. Mengurangi anggaran daerah maju</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 4</span>
+                        <p class="question-text">Apa pentingnya peningkatan kapasitas SDM di daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q44" value="A" data-correct>
+                                <span>A. Untuk meningkatkan kualitas pelayanan dan pengelolaan pemerintahan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q44" value="B">
+                                <span>B. Tidak penting sama sekali</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q44" value="C">
+                                <span>C. Hanya untuk menambah jumlah pegawai</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q44" value="D">
+                                <span>D. Untuk mempersulit sistem</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 5</span>
+                        <p class="question-text">Apa yang dimaksud dengan koordinasi antar tingkat pemerintahan?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q45" value="A">
+                                <span>A. Pemisahan total tanpa komunikasi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q45" value="B" data-correct>
+                                <span>B. Kerjasama dan sinkronisasi kebijakan antara pusat dan daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q45" value="C">
+                                <span>C. Persaingan antar pemerintahan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q45" value="D">
+                                <span>D. Dominasi satu tingkat pemerintahan</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 6</span>
+                        <p class="question-text">Apa peran masyarakat dalam masa depan otonomi daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q46" value="A" data-correct>
+                                <span>A. Aktif mengawasi, berpartisipasi, dan memberikan masukan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q46" value="B">
+                                <span>B. Pasif dan menerima semua kebijakan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q46" value="C">
+                                <span>C. Tidak ada peran</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q46" value="D">
+                                <span>D. Hanya mengeluh tanpa aksi</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 7</span>
+                        <p class="question-text">Apa yang dimaksud dengan kapasitas fiskal daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q47" value="A" data-correct>
+                                <span>A. Kemampuan daerah dalam menghimpun dan mengelola pendapatan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q47" value="B">
+                                <span>B. Jumlah hutang daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q47" value="C">
+                                <span>C. Bantuan dari luar negeri</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q47" value="D">
+                                <span>D. Tidak ada hubungan dengan keuangan</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 8</span>
+                        <p class="question-text">Mengapa evaluasi berkala penting dalam otonomi daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q48" value="A" data-correct>
+                                <span>A. Untuk menilai efektivitas kebijakan dan melakukan perbaikan</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q48" value="B">
+                                <span>B. Untuk mencari kesalahan pejabat</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q48" value="C">
+                                <span>C. Tidak diperlukan evaluasi</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q48" value="D">
+                                <span>D. Hanya untuk formalitas</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 9</span>
+                        <p class="question-text">Apa yang dimaksud dengan inovasi daerah?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q49" value="A" data-correct>
+                                <span>A. Terobosan baru dalam pengelolaan pemerintahan dan pelayanan publik</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q49" value="B">
+                                <span>B. Meniru kebijakan daerah lain</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q49" value="C">
+                                <span>C. Mempertahankan cara lama</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q49" value="D">
+                                <span>D. Tidak ada perubahan sama sekali</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <span class="question-number">Soal 10</span>
+                        <p class="question-text">Apa harapan untuk masa depan otonomi daerah di Indonesia?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q50" value="A" data-correct>
+                                <span>A. Pemerataan pembangunan, peningkatan kesejahteraan, dan good governance</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q50" value="B">
+                                <span>B. Kembali ke sentralisasi penuh</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q50" value="C">
+                                <span>C. Meningkatkan kesenjangan antar daerah</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q50" value="D">
+                                <span>D. Menghapus sistem otonomi</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="submit-btn" onclick="checkAnswers(5)">Periksa Jawaban ✓</button>
+                <button class="reset-btn" onclick="resetStage(5)">Ulangi Tahap Ini ↻</button>
+                
+                <div id="result5" class="result"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showStage(stageNum) {
+            // Hide all stages
+            const stages = document.querySelectorAll('.stage');
+            stages.forEach(stage => stage.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.stage-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected stage
+            document.getElementById('stage' + stageNum).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function checkAnswers(stageNum) {
+            const stage = document.getElementById('stage' + stageNum);
+            const questions = stage.querySelectorAll('.question-card');
+            let correctCount = 0;
+            let totalQuestions = questions.length;
+            
+            questions.forEach((question, index) => {
+                const options = question.querySelectorAll('.option');
+                const selectedOption = question.querySelector('input[type="radio"]:checked');
+                
+                // Reset previous styling
+                options.forEach(opt => {
+                    opt.classList.remove('correct', 'incorrect');
+                });
+                
+                if (selectedOption) {
+                    const selectedLabel = selectedOption.parentElement;
+                    const correctOption = question.querySelector('[data-correct]').parentElement;
+                    
+                    if (selectedOption.parentElement.querySelector('[data-correct]')) {
+                        selectedLabel.classList.add('correct');
+                        correctCount++;
+                    } else {
+                        selectedLabel.classList.add('incorrect');
+                        correctOption.classList.add('correct');
+                    }
+                }
+            });
+            
+            // Calculate percentage
+            const percentage = (correctCount / totalQuestions) * 100;
+            
+            // Display result
+            const resultDiv = document.getElementById('result' + stageNum);
+            let feedback = '';
+            let emoji = '';
+            
+            if (percentage >= 90) {
+                feedback = 'Luar biasa! Anda sangat memahami materi ini! 🌟';
+                emoji = '🎉';
+            } else if (percentage >= 70) {
+                feedback = 'Bagus sekali! Terus tingkatkan pemahaman Anda! ✨';
+                emoji = '👏';
+            } else if (percentage >= 50) {
+                feedback = 'Cukup baik! Mari pelajari lagi untuk hasil yang lebih baik! 💪';
+                emoji = '📚';
+            } else {
+                feedback = 'Tetap semangat! Ulangi materi dan coba lagi! 🌸';
+                emoji = '💖';
+            }
+            
+            resultDiv.innerHTML = `
+                <h3>${emoji} Hasil Anda ${emoji}</h3>
+                <div class="score">${correctCount}/${totalQuestions}</div>
+                <div class="score-text">Nilai: ${percentage.toFixed(0)}%</div>
+                <div class="feedback">${feedback}</div>
+            `;
+            resultDiv.classList.add('show');
+            
+            // Scroll to result
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        function resetStage(stageNum) {
+            const stage = document.getElementById('stage' + stageNum);
+            const radios = stage.querySelectorAll('input[type="radio"]');
+            const options = stage.querySelectorAll('.option');
+            const resultDiv = document.getElementById('result' + stageNum);
+            
+            // Clear all selections
+            radios.forEach(radio => radio.checked = false);
+            
+            // Remove styling
+            options.forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+            });
+            
+            // Hide result
+            resultDiv.classList.remove('show');
+            
+            // Scroll to top of stage
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Add accessibility: keyboard navigation for options
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    this.querySelector('input[type="radio"]').click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
