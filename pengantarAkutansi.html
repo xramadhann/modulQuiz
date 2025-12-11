@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul PPKN - Otonomi Daerah & Good and Clean Government</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✿ Modul UT Pengantar Akutansi ✿</h1>
+            <p class="subtitle">EKMA4115</p>
+        </div>
+        
+        <nav class="nav-container">
+            <a href="index.html"><button class="stage-btn">Matkul Lainnya</button></a>
+            <button class="stage-btn active" onclick="showStage(1)">Modul 1</button>
+            <button class="stage-btn" onclick="showStage(2)">Modul 2</button>
+            <button class="stage-btn" onclick="showStage(3)">Modul 3</button>
+            <button class="stage-btn" onclick="showStage(4)">Modul 4</button>
+            <button class="stage-btn" onclick="showStage(5)">Modul 5</button>
+            <button class="stage-btn" onclick="showStage(6)">Modul 6</button>
+        </nav>
+
+        <div class="content">
+            <div id="stage1" class="stage active">
+                
+                <h2 class="stage-title">Modul 1 : Ruang Lingkup Akutansi</h2>
+
+                <nav class="sub-nav-container">
+                    <button class="stage-btn active" onclick="showSubStage(1, this)">Modul 1 Sub 1</button>
+                    <button class="stage-btn" onclick="showSubStage(2, this)">Modul 1 Sub 2</button>
+                </nav>
+            
+            <div id="subStage1_content" class="sub-stage-content" style="display:none;">
+                <div class="summary">
+                    <h3>Ringkasan Materi Sub 1 📝</h3>
+                    <ul>
+                        <li>Akuntansi dapat diartikan sebagai "bahasa bisnis" karena akuntansi adalah sebuah sistem informasi yang menyediakan laporan-laporan bagi pihak-pihak yang berkepentingan (stakeholders) mengenai aktivitas ekonomi dan kondisi sebuah perusahaan. Akuntansi dapat didefinisikan sebagai suatu proses pencatatan, pengukuran, dan penyampaian informasi ekonomi agar dapat dipakai sebagai dasar pengambilan keputusan atau kebijaksanaan.
+                        Pihak-pihak yang berkepentingan (pemangku kepentingan) terhadap laporan keuangan suatu perusahaan antara lain penanam dana atau modal yang membutuhkan informasi tentang posisi keuangan dan masa depan perusahaan, kreditur dan supplier (pemasok) perusahaan akan menilai sehat tidaknya keuangan perusahaan dan menilai risiko terhadap kredit yang akan diberikan kepada perusahaan. Lembaga pemerintah memerlukan informasi mengenai aktivitas keuangan perusahaan guna keperluan perpajakan dan perundang-undangan. Karyawan dan organisasi juga berkepentingan terhadap stabilitas dan profitabilitas dari perusahaan tempat mereka bekerja dan para akademisi yang berkepentingan untuk penelitian dan pendidikan.</li>
+                        <li>Akuntansi juga mengenal adanya spesialisasi seperti halnya dengan ilmu sosial lainnya. Bidang spesialisasi akuntansi antara lain meliputi: Akuntansi Keuangan, Auditing. Akuntansi Biaya, Akuntansi Manajemen, Akuntansi Perpajakan, Sistem Akuntansi, Akuntansi Anggaran, Akuntansi Pemerintahan dan Akuntansi sosial.
+                        Peranan Akuntansi dalam kegiatan perusahaan dapat digunakan sebagai alat perencanaan dan alat evaluasi hasil kegiatan. Akuntansi sebagai alat perencanaan dapat terlihat apabila manajemen ingin mengetahui berapa jumlah uang yang harus dibayar, kapan jatuh temponya dan kepada siapa harus dibayar ini semuanya dapat diketahui dari catatan akuntansi. Sedangkan akuntansi sebagai alat evaluasi hasil kegiatan dapat terlihat apabila manajemen ingin membandingkan antara pelaksanaan sesungguhnya dengan tujuan yang direncanakan.
+                        Setiap kejadian atau peristiwa mengakibatkan adanya perubahan terhadap posisi keuangan dari suatu organisasi disebut dengan transaksi. Dalam perusahaan transaksi dapat dibedakan menjadi dua yaitu transaksi intern dan transaksi ekstern.</li>
+                        <li>Kekayaan atau harta yang dimiliki oleh perusahaan disebut aktiva sedangkan hak atau sumber dari mana aktiva tersebut berasal disebut ekuitas (hak milik). Hubungan antara aktiva dan hak milik ini dapat dinyatakan dalam persamaan sebagai berikut:
+                        <strong><center> Aktiva = Ekuitas </center></strong><br>
+                        Ekuitas dapat dibedakan menjadi dua bagian pokok, yaitu hak milik dari kreditur (disebut dengan utang) dan hak milik dari pemilik perusahaan (disebut dengan modal atau ekuitas) dengan demikian persamaan di atas dapat diperluas menjadi:
+                        <br>
+                        <strong><center> Aktiva = Utang + Ekuitas </center></strong>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Soal 1 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 1</span>
+                    <p class="question-text">Akuntansi tidak dapat diterapkan pada organisasi ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q1" value="A">
+                            <span>A. yayasan</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="B">
+                            <span>B. pemerintah daerah</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="C">
+                            <span>C. koperasi</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="D" data-correct>
+                            <span>D. tidak tersedia jawaban yang tepat</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 2 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 2</span>
+                    <p class="question-text">Berikut ini, yang bukan bidang-bidang akuntansi adalah ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q2" value="A" data-correct>
+                            <span>A. auditing</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="B">
+                            <span>B. akuntansi manajemen</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="C">
+                            <span>C. matematika</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="D">
+                            <span>D. anggaran</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 3 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 3</span>
+                    <p class="question-text">Disiplin ilmu yang paling berkaitan erat dengan bidang akuntansi keuangan adalah ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q3" value="A" data-correct>
+                            <span>A. auditing</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="B">
+                            <span>B. sistem informasi</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="C">
+                            <span>C. matematika</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="D">
+                            <span>D. akuntansi manajemen</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 4 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 4</span>
+                    <p class="question-text">Akuntan yang bekerja di suatu perusahaan multinasional disebut ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q4" value="A">
+                            <span>A. Akuntan Publik</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="B">
+                            <span>B. Akuntan Swasta</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="C" data-correct>
+                            <span>C. Internal Auditor</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="D">
+                            <span>D. Akuntan Internasional</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 5 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 5</span>
+                    <p class="question-text">Seorang auditor harus menguasai bidang ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q5" value="A">
+                            <span>A. Akuntansi Manajemen dan Akuntansi Keuangan</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="B">
+                            <span>B. Auditing dan Akuntansi Keuangan</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="C">
+                            <span>C. Auditing dan Akuntansi Manajemen</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="D" data-correct>
+                            <span>D. Akuntansi Keuangan dan Sistem Akuntansi</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 6 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 6</span>
+                    <p class="question-text">Dalam penyusunan laporan keuangan seorang akuntan harus berpedoman pada ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q6" value="A" data-correct>
+                            <span>A. PABU (Prinsip Akuntansi yang Berterima Umum)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="B">
+                            <span>B. Standar Auditing</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="C">
+                            <span>C. Kode Etik Akuntan</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="D">
+                            <span>D. PSAK (Pernyataan Standar Akuntansi Keuangan)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 7 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 7</span>
+                    <p class="question-text">Persamaan akuntansi didasarkan pada persamaan sebagai berikut</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q7" value="A">
+                            <span>A. Aktiva = Modal Sendiri</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="B">
+                            <span>B. Aktiva = Hutang</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="C">
+                            <span>C. Aktiva - Hutang = Modal Sendiri</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="D" data-correct>
+                            <span>D. Aktiva = Hutang + Modal</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 8 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 8</span>
+                    <p class="question-text">Unsur dasar laporan keuangan terdiri atas:</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q8" value="A">
+                            <span>A. Pendapatan, Aktiva dan Passiva</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="B" data-correct>
+                            <span>B. Aset, Kewajiban dan Ekuitas Pemilik</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="C">
+                            <span>C. Beban, Pendapatan dan Modal</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="D">
+                            <span>D. Kekayaan, kewajiban dan beban</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 9 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 9</span>
+                    <p class="question-text">Dasar pencatatan akuntansi yang diharuskan dalam PABU adalah dasar ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q9" value="A">
+                            <span>A. Satuan usaha</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="B">
+                            <span>B. Historis</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="C">
+                            <span>C. Dasar tunai</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="D" data-correct>
+                            <span>D. Dasar Akrual</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 10 (Akuntansi) -->
+                <div class="question-card">
+                    <span class="question-number">Soal 10</span>
+                    <p class="question-text">Bila suatu perusahaan membeli alat angkutan secara kredit, maka pos yang akan bertambah adalah ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q10_akt" value="A" data-correct>
+                            <span>A. Kekayaan dan kewajiban</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10_akt" value="B">
+                            <span>B. Kekayaan dan modal</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10_akt" value="C">
+                            <span>C. Kekayaan saja</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10_akt" value="D">
+                            <span>D. Kewajiban saja</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 11 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 11</span>
+                    <p class="question-text">Bidang akuntansi yang melayani kepentingan masyarakat yang biasanya terdapat dalam organisasi nirlaba adalah ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q11" value="A" data-correct>
+                            <span>A. akuntansi swasta</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q11" value="B">
+                            <span>B. akuntansi keuangan</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q11" value="C">
+                            <span>C. akuntansi perpajakan</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q11" value="D">
+                            <span>D. akuntansi sektor publik</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 12 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 12</span>
+                    <p class="question-text">Disiplin ilmu yang berkaitan erat dengan bidang akuntansi keuangan adalah ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q12" value="A" data-correct>
+                            <span>A. auditing</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q12" value="B">
+                            <span>B. sistem informasi</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q12" value="C">
+                            <span>C. matematika</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q12" value="D">
+                            <span>D. akuntansi manajemen</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 13 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 13</span>
+                    <p class="question-text">Akuntan yang bekerja di suatu perusahaan multinasional disebut ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q13" value="A">
+                            <span>A. akuntan publik</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q13" value="B" data-correct>
+                            <span>B. akuntan swasta</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q13" value="C">
+                            <span>C. internal auditor</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q13" value="D">
+                            <span>D. akuntan internasional</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 14 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 14</span>
+                    <p class="question-text">Seorang auditor harus menguasai bidang ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q14" value="A">
+                            <span>A. akuntansi manajemen dan akuntansi keuangan</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q14" value="B" data-correct>
+                            <span>B. auditing dan akuntansi keuangan</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q14" value="C">
+                            <span>C. auditing dan akuntansi manajemen</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q14" value="D">
+                            <span>D. akuntansi keuangan dan sistem akuntansi</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 15 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 15</span>
+                    <p class="question-text">Akuntan pemerintah melaksanakan tugasnya dengan menggunakan pedoman ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q15" value="A">
+                            <span>A. standar akuntansi keuangan</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q15" value="B" data-correct>
+                            <span>B. standar akuntansi pemerintahan</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q15" value="C">
+                            <span>C. standar akuntansi badan pemerintah</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q15" value="D">
+                            <span>D. standar pemeriksaan keuangan</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 16 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 16</span>
+                    <p class="question-text">Konsep kesatuan usaha (business entity) dapat diartikan sebagai ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q16" value="A">
+                            <span>A. suatu entitas harus bersatu dengan pemiliknya</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q16" value="B">
+                            <span>B. antara pemilik dengan pengelola dijadikan satu kesatuan</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q16" value="C" data-correct>
+                            <span>C. pemisahan antara suatu entitas dengan pemiliknya</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q16" value="D">
+                            <span>D. pemisahan antara usaha pemilik</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 17 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 17</span>
+                    <p class="question-text">Suatu entitas (badan usaha) akan mencatat transaksi berdasar pada ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q17" value="A" data-correct>
+                            <span>A. harga perolehan</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q17" value="B">
+                            <span>B. harga pembelian</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q17" value="C">
+                            <span>C. harga pokok</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q17" value="D">
+                            <span>D. harga penjualan</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 18 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 18</span>
+                    <p class="question-text">Persamaan akuntansi yang benar adalah ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q18" value="A" data-correct>
+                            <span>A. aktiva = ekuitas - utang</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q18" value="B">
+                            <span>B. aktiva = ekuitas + utang</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q18" value="C">
+                            <span>C. ekuitas = aktiva + utang</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q18" value="D">
+                            <span>D. utang = aktiva + ekuitas</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 19 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 19</span>
+                    <p class="question-text">Apabila terdapat transaksi penambahan kas dari pemilik akan berakibat pada perubahan ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q19" value="A" data-correct>
+                            <span>A. utang jangka panjang</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q19" value="B">
+                            <span>B. piutang</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q19" value="C">
+                            <span>C. ekuitas</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q19" value="D">
+                            <span>D. investasi</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Soal 20 -->
+                <div class="question-card">
+                    <span class="question-number">Soal 20</span>
+                    <p class="question-text">Hak milik dari kreditur disebut dengan istilah ....</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q20" value="A">
+                            <span>A. piutang</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q20" value="B">
+                            <span>B. kredit</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q20" value="C" data-correct>
+                            <span>C. utang</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q20" value="D">
+                            <span>D. modal</span>
+                        </label>
+                    </div>
+                </div>
+                <button class="reset-btn" onclick="resetStage(2)">Ulangi Tahap Ini ↻</button>
+                <button class="submit-btn" onclick="checkAnswers(2)">Periksa Jawaban ✓</button>
+                <div id="result2" class="result"></div>
+            </div>
+            
+            
+            
+
+
+            <div id="subStage2_content" class="sub-stage-content" style="display:none;">
+                <h3>Sub Bab 2: Ruang Lingkup dan Objek Studi 📚</h3>
+                <p><strong>Ruang Lingkup:</strong> Pendidikan Kewarganegaraan mencakup sembilan poin pembahasan yang detail yang merupakan pokok bahasan dalam modul-modul selanjutnya.</p>
+                <p><strong>Objek Studi:</strong></p>
+                <ul>
+                    <li>**Objek Material:** Meliputi segala aspek kehidupan bernegara, bermasyarakat, dan berbangsa (Kewarganegaraan Indonesia).</li>
+                    <li>**Objek Formal:** Fokus pada cara pandang ilmiah dalam mengkaji Kewarganegaraan, yaitu pendekatan Pancasila dan UUD 1945.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
