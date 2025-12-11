@@ -249,6 +249,7 @@ function resetStage(stageNum) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+
 // Add accessibility: keyboard navigation for options
 document.querySelectorAll('.option').forEach(option => {
     option.addEventListener('keypress', function(e) {
