@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modul PPKN - Otonomi Daerah & Good and Clean Government</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="pengantarAkutansi.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -30,12 +30,12 @@
                 <h2 class="stage-title">Modul 1 : Ruang Lingkup Akutansi</h2>
 
                 <nav class="sub-nav-container">
-                    <button class="stage-btn active" onclick="showSubStage(99, this)">Pendahuluan</button>
-                    <button class="stage-btn" onclick="showSubStage(1, this)">Modul 1 Sub 1</button>
-                    <button class="stage-btn" onclick="showSubStage(2, this)">Modul 1 Sub 2</button>
+                    <button class="stage-btn active" onclick="showSubStage1(99, this)">Pendahuluan</button>
+                    <button class="stage-btn" onclick="showSubStage1(1, this)">Modul 1 Sub 1</button>
+                    <button class="stage-btn" onclick="showSubStage1(2, this)">Modul 1 Sub 2</button>
                 </nav>
             
-            <div id="subStage99_content" class="sub-stage-content" style="display:flex;">
+            <div id="subStage1_99_content" class="sub-stage-content" style="display:flex;">
                 <div class="summary">
                     <h3>Pendahuluan 📝</h3>
                     <ul>
@@ -48,7 +48,7 @@
                     </ul>
                 </div>
             </div>
-            <div id="subStage1_content" class="sub-stage-content" style="display:none;">
+            <div id="subStage1_1_content" class="sub-stage-content" style="display:none;">
                 <div class="summary">
                     <h3>Ringkasan Materi Sub 1 (Pendahuluan Akutansi)📝</h3>
                     <ul>
@@ -544,11 +544,11 @@
                         </label>
                     </div>
                 </div>
-                <button class="submit-btn" onclick="checkAnswers(1)">Periksa Jawaban ✓</button>
-                <button class="reset-btn" onclick="resetStage(1)">Ulangi Tahap Ini ↻</button>
-                <div id="result1" class="result"></div>
+                <button class="submit-btn" onclick="checkQuiz('subStage1_1_content')">Periksa Jawaban ✓</button>
+                <button class="reset-btn" onclick="resetQuiz('subStage1_1_content')">Ulangi Tahap Ini ↻</button>
+                <div id="result_subStage1_1_content" class="result"></div>
             </div>
-        <div id="subStage2_content" class="sub-stage-content" style="display:none;">
+        <div id="subStage1_2_content" class="sub-stage-content" style="display:none;">
                 <div class="summary">
                     <h3>Ringkasan Materi Sub 2 (Ruang Lingkup Akutansi) 📝</h3>
                     <ul>
@@ -1038,9 +1038,795 @@
                     </label>
                 </div>
             </div>
-                <button class="submit-btn" onclick="checkAnswers(2)">Periksa Jawaban ✓</button>
-                <button class="reset-btn" onclick="resetStage(2)">Ulangi Tahap Ini ↻</button>
-                <div id="result2" class="result"></div>
+                <button class="submit-btn" onclick="checkQuiz('subStage1_2_content')">Periksa Jawaban ✓</button>
+                <button class="reset-btn" onclick="resetQuiz('subStage1_2_content')">Ulangi Tahap Ini ↻</button>
+                <div id="result_subStage1_2_content" class="result"></div>
+            </div>
+        </div>
+        
+        <div id="stage2" class="stage">
+                
+                <h2 class="stage-title">Modul 2 : Siklus Akutansi</h2>
+
+                <nav class="sub-nav-container">
+                    <button class="stage-btn active" onclick="showSubStage2(99, this)">Pendahuluan</button>
+                    <button class="stage-btn" onclick="showSubStage2(1, this)">Modul 2 Sub 1</button>
+                    <button class="stage-btn" onclick="showSubStage2(2, this)">Modul 2 Sub 2</button>
+                </nav>
+            
+            <div id="subStage2_99_content" class="sub-stage-content" style="display:flex;">
+                <div class="summary">
+                    <h3>Pendahuluan 📝</h3>
+                    <ul>
+                        <li>Pada modul ini Anda akan belajar bagaimana cara mencatat transaksi perusahaan dengan menggunakan ketiga unsur dasar di atas dan bagaimana hubungan akun/rekening-rekening/perkiraan yang ada dalam transaksi dengan laporan keuangan.
+                       </li>
+                        <li>Pencatatan transaksi akan diawali dengan buku jurnal sebagai buku catatan pertama (book of original entry) yang dilanjutkan dengan pencatatan (pembukuan) ke dalam buku besar (general ledger) dan pembuatan daftar saldo atau neraca saldo (trial balance) sebagai dasar atau pedoman dalam penyusunan laporan keuangan.
+                        </li>
+                        <li> Transaksi perusahaan dicatat berdasarkan bukti pembukuan sehingga ada kemungkinan terdapat transaksi yang sudah terjadi tetapi belum dicatat karena belum ada atau dibuatkan buktinya. Akibatnya dapat terjadi adanya akun/perkiraan/rekening yang belum menggambarkan keadaan yang senyatanya dan perlu dimutakhirkan dengan cara membuat jurnal penyesuaian.
+                        </li>
+                        <li> Dalam Kegiatan Belajar 2 akan diuraikan bagaimana membuat menganalisis akun-akun yang perlu disesuaikan dan membuat jurnal penyesuaian.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="subStage2_1_content" class="sub-stage-content" style="display:none;">
+                <div class="summary">
+                    <h3>Ringkasan Materi Sub 1 (Ruang Lingkup Akutansi)📝</h3>
+                    <ul>
+                        <li>
+                            Pengaruh transaksi terhadap suatu perusahaan di dalam akuntansi dapat digambarkan dengan menggunakan persamaan akuntansi sebagai berikut:<br>
+                            <strong><center>Aktiva - Utang + Ekuitas atau A = U+E</center></strong>
+                        </li>
+                        <li>
+                            Ekuitas (modal) perusahaan dapat berubah apabila perusahaan memperoleh Pendapatan (P) atau adanya setoran modal, dan perusahaan menyerap Beban (B) atau adanya pengambilan modal (prive).
+                        </li>
+                        <li>
+                            Meskipun setiap transaksi dapat dicatat dengan persamaan akuntansi seperti di atas, namun bentuk pencatatan tersebut kurang praktis digunakan, karena transaksi yang terjadi di perusahaan selama periode tertentu akan menyangkut berbagai pos (elemen) aktiva, utang, ekuitas, pendapatan dan biaya yang jumlahnya dapat mencapai ratusan.
+                        </li>
+                        <li>
+                            Agar informasi harian dapat tersedia, pada saat dibutuhkan, dan laporan keuangan dapat disusun setiap saat, maka perlu dibuat catatan yang terpisah untuk setiap pos. Catatan tersebut dalam akuntansi disebut dengan rekening (akun). Sedangkan kelompok rekening yang berkaitan dan merupakan satu unit disebut buku besar (ledger).
+                        </li>
+                        <li>
+                            Akun adalah catatan formal akuntansi yang digunakan untuk mengikhtisarkan transaksi yang terjadi selama periode akuntansi dan bentuk akun ini dapat bermacam- macam. Bentuk paling sederhana suatu akun terdiri atas tiga bagian: 
+                        </li>
+                        <li>
+                            (1) Judul, yang menunjukkan nama dari pos yang dicatat.
+                        </li>
+                        <li>
+                            (2) ruang (tempat) untuk mencatat penambahan jumlah dari pos tersebut dalam unit rupiah (uang)
+                        </li>
+                        <li>
+                            (3) ruang untuk mencatat pengurangan jumlah dari pos tersebut. Bentuk rekening tersebut sering disebut akun dua kolom atau akun T.
+                        </li>
+                        <li>
+                            Pada akhir periode seluruh akun dijumlahkan dan dihitung saldonya. Akun-akun ini merupakan bahan dasar yang akan digunakan untuk menyusun laporan keuangan. Akun-akun pendapatan dan beban dipakai untuk menyusun laporan laba rugi, akun aktiva, utang dan ekuitas dipakai untuk menyusun neraca, akun ekuitas dan prive dipakai untuk menyusun laporan perubahan modal dan akun kas dipakai untuk menyusun arus kas.
+                        </li>
+                        <li>
+                            Cara pencatatan langsung ke dalam akun sulit dilakukan dalam praktik, karena jumlah akun cukup banyak dan terjadi kesalahan sulit untuk melacak kesalahan tersebut, maka untuk pencatatan transaksi sebelum dilakukan pencatatan ke dalam akun, terlebih dahulu dicatat dalam buku jurnal. Buku jurnal yaitu buku yang digunakan untuk mencatat kejadian keuangan (transaksi) yang dilakukan secara urut waktu dan pencatatan dalam buku jurnal ini juga sejalan dengan persamaan akuntansi, dalam arti setiap transaksi akan di debet dan di kredit dalam jumlah yang sama. Bentuk buku jurnal ini yang banyak dikenal adalah bentuk dua kolom.
+                        </li>
+                    </ul>
+                </div>
+            <div class="question-card">
+                <span class="question-number">Soal 1</span>
+                <p class="question-text">Berikut ini masalah intern yang memasarkan ekuitas ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q1" value="A">
+                        <span>A. pendapatan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="B">
+                        <span>B. beban</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="C" data-correct>
+                        <span>C. prive</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="D">
+                        <span>D. pendapatan dan setoran modal</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 2</span>
+                <p class="question-text">Dalam praktek akuntansi, transaksi yang terjadi akan menyangkut berbagai pos, sehingga untuk mencatatnya ke dalam persamaan akuntansi akan merepotkan kesuliatan Untuk itu sebelmunya harus dilakukan pencatatan ke dalam ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q2" value="A">
+                        <span>A. akun (rekening)</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="B">
+                        <span>B. buku jurnal</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="C" data-correct>
+                        <span>C. buku besar</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="D">
+                        <span>D. buku transaksi</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 3</span>
+                <p class="question-text">Bertambahnya pos persediaan barang <i>inventory</i> akan dicatat sebelah ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q3" value="A" data-correct>
+                        <span>A. kredit</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="B">
+                        <span>B. debet</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="C">
+                        <span>C. debet dan kredit</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="D">
+                        <span>D. tergantung pada jumlah persediaan</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 4</span>
+                <p class="question-text">Akun ekuitas dari privé dipaskan untuk menyusun laporan ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q4" value="A">
+                        <span>A. neraca</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="B">
+                        <span>B. laba rugi</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="C" data-correct>
+                        <span>C. perubahan modal</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="D">
+                        <span>D. arus kas</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 5</span>
+                <p class="question-text">Buku besar diposting dengan isi/isi buku catatan pertama (<i>book of original entry</i>) sebab buku jurnal dipandang ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q5" value="A">
+                        <span>A. pertama kali oleh bagian pembukuan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q5" value="B">
+                        <span>B. mencatat transaksi pertama kali secara lengkap dan urut waktu</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q5" value="C" data-correct>
+                        <span>C. pencatatan semua transaksi yang terjadi mampu yang jelas</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q5" value="D">
+                        <span>D. sebagai dasar pembuatan laporan keuangan</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 6</span>
+                <p class="question-text">Proses memasukkan atau memindahkan transaksi dari buku jurnal ke buku besar sesuai dengan jumlahnya disebut ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q6" value="A">
+                        <span>A. buku besar</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q6" value="B">
+                        <span>B. pembukuan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q6" value="C" data-correct>
+                        <span>C. posting</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q6" value="D">
+                        <span>D. pendebatan</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 7</span>
+                <p class="question-text">Pembelian bahan baku secara kredit sebeser Rp10.000,00 akan menyebbakan ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q7" value="A">
+                        <span>A. bahan baku bertambah dan kas berkurang masing-masing Rp10.000.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q7" value="B" data-correct>
+                        <span>B. bahan baku bertambah dan kas berkurang masing-masing Rp10.000.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q7" value="C">
+                        <span>C. bahan baku bertambah dan modal berkurang masing-masing Rp10.000.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q7" value="D">
+                        <span>D. bahan baku bertambah dan utamng berkurang masing-masing Rp10.000.000,00</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 8</span>
+                <p class="question-text">Keuntungan yang diterima perusahaan sebesar Rp500.000,00 akan menyebabkan ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q8" value="A">
+                        <span>A. kas dan modal berkurang masing-masing sebesar Rp500.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q8" value="B">
+                        <span>B. kas dan modal bertambah masing-masing sebesar Rp500.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q8" value="C" data-correct>
+                        <span>C. kas berkurang dan modal bertambah masing-masing sebesar Rp500.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q8" value="D">
+                        <span>D. kas dan utang berkurang masing-masing sebesar Rp500.000,00</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 9</span>
+                <p class="question-text">Pembayaran utang untuk pembelian bahan baku kepada pihak kreditor akan dicatat dengan ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q9" value="A">
+                        <span>A. debet kas; kredit utang</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q9" value="B">
+                        <span>B. debet utang; kredit kas</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q9" value="C">
+                        <span>C. debet bahan baku; kredit utang</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q9" value="D" data-correct>
+                        <span>D. debet bahan baku; kredit kas</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 10</span>
+                <p class="question-text">Formadir yang berisikan saldo dan posisi perkiraan dalam buku besar pada tanggal tertentu disebut ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q10" value="A">
+                        <span>A. jurnal</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q10" value="B">
+                        <span>B. buku besar</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q10" value="C" data-correct>
+                        <span>C. neraca percobaan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q10" value="D">
+                        <span>D. jurnal penyesuaian</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 11</span>
+                <p class="question-text">Benak akun yang sering dipandang dan paling sederhana adalah ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q11" value="A">
+                        <span>A. akun kolom 2</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q11" value="B">
+                        <span>B. akun kolom 3</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q11" value="C">
+                        <span>C. akun kolom 4</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q11" value="D" data-correct>
+                        <span>D. akun kolom 6</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 12</span>
+                <p class="question-text">Pembayaran utang Rp100.000,00, transaksi ini akan berpengaruh pada ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q12" value="A">
+                        <span>A. akun kas bertambah Rp100.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q12" value="B" data-correct>
+                        <span>B. akun piutang bertambah Rp100.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q12" value="C">
+                        <span>C. akun utang berkurang Rp100.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q12" value="D">
+                        <span>D. akun beban berkurang Rp100.000,00</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 13</span>
+                <p class="question-text">Ekuitas (modal) perusahaan akan berubah apabila memperoleh, <i>kecuali</i> ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q13" value="A">
+                        <span>A. pendapatan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q13" value="B">
+                        <span>B. setoran modal</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q13" value="C">
+                        <span>C. beban</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q13" value="D" data-correct>
+                        <span>D. utang</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 14</span>
+                <p class="question-text">Pencatatan akun aktiva memiliki akun normal ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q14" value="A">
+                        <span>A. debet</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q14" value="B">
+                        <span>B. kredit</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q14" value="C">
+                        <span>C. debet atau kredit</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q14" value="D" data-correct>
+                        <span>D. tergantung transaksi</span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="question-card">
+                <span class="question-number">Soal 15</span>
+                <p class="question-text">Siklus akuntansi di bawah ini yang benar adalah ....</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q15" value="A">
+                        <span>A. jurnal – neraca saldo – buku besar – jurnal penyesuaian – laporan keuangan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q15" value="B" data-correct>
+                        <span>B. jurnal – buku besar – neraca saldo – jurnal penyesuaian – laporan keuangan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q15" value="C">
+                        <span>C. neraca saldo – jurnal – buku besar – jurnal penyesuaian – laporan keuangan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q15" value="D">
+                        <span>D. buku besar – jurnal – jurnal penyesuaian – neraca saldo – laporan keuangan</span>
+                    </label>
+                </div>
+                <button class="submit-btn" onclick="checkQuiz('subStage2_1_content')">Periksa Jawaban ✓</button>
+                <button class="reset-btn" onclick="resetQuiz('subStage2_1_content')">Ulangi Tahap Ini ↻</button>
+                <div id="result_subStage2_1_content" class="result"></div>
+            </div>
+        </div>
+        <div id="subStage2_2_content" class="sub-stage-content" style="display:none;">
+                <div class="summary">
+                    <h3>Ringkasan Materi Sub 2 (Penyesuaian Jurnal)📝</h3>
+                    <ul>
+                        <li>
+                            Daftar saldo pada akhir periode akuntansi, sering kali tidak mencerminkan saldo yang sesungguhnya pada saat tersebut. Hal ini disebabkan karena adanya transaksi- transaksi yang setiap saat berjalan terus, di mana perusahaan tidak praktis (tidak sengaja) untuk mencetaknya. Agar akun-akun dalam daftar saldo dapat langsung disajikan sebagai laporan keuangan, maka akun-akun tersebut harus disesuaikan terlebih dahulu.
+                        </li>
+                        <li>
+                            Transaksi-transaksi kontinu yang biasanya selalu memerlukan penyesuaian setiap akhir periode akuntansi dapat diikhtisarkan sebagai berikut.
+                        </li>
+                        <li>
+                            A. Alokasi harga perolehan dari persekot biaya, seperti bahan habis pakai, persekot sewa, dan persekot biaya yang lain, penyesuaian dalam hal ini dilakukan untuk mengalokasikan beberapa bagian persekot biaya yang sudah menjadi biaya-biaya dan beberapa bagian yang masih merupakan persekot. Dalam akuntansi dikenal dengan istilah pos-pos defferal (transitoris)
+                        </li>
+                        <li>
+                           B. Alokasi pendapatan yang diterima di muka seperti: uang muka pendapatan sewa, uang muka penjualan dan uang muka pendapatan yang lain. Penyesuaian ini diperlukan untuk memisahkan beberapa bagian Uang Muka Pendapatan yang sudah menjadi pendapatan dan beberapa bagian yang masih tetap merupakan uang muka. Pos-pos seperti ini juga disebut dengan pos-pos defferal. 
+                        </li>
+                        <li>
+                           C. Alokasi harga perolehan aktiva jangka panjang. Penyesuaian ini dilakukan untuk mengakui adanya biaya yang terjadi karena perusahaan menggunakan aktiva tetap yang manfaatnya semakin menurun. Penurunan manfaat ini dalam akuntansi disebut depresiasi (penyusutan). 
+                        </li>
+                        <li>
+                           D. Biaya yang terutang (bertambahnya biaya) penyesuaian ini terjadi karena sudah terjadi biaya dalam perusahaan, tetapi belum dicatat sampai tanggal neraca. Dengan demikian penyesuaian di sini digunakan untuk mencatat bertambahnya biaya dan untuk mencatat bertambahnya utang biaya. Pos-pos ini dikenal dengan istilah pos-pos akrual (antisipasi)
+                        </li>
+                        <li>
+                           Setelah penyesuaian-penyesuaian tersebut dicatat dan dibukukan, maka buku besar telah siap untuk disajikan sebagai elemen laporan keuangan.
+                        </li>
+                    </ul>
+                </div>
+            <div class="question-card">
+                <span class="question-number">Soal 1</span>
+                <p class="question-text">Metode akuntansi yang mengakui pendapatan pada saat uang (tunai) diterima dan pendapatan dicatat pada saat yang bersangutan dikenal dengan metode ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q1" value="A">
+                        <span>A. akrual</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="B">
+                        <span>B. asus tunai atau aktual</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="C">
+                        <span>C. asas himpunan atau waktu</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="D" data-correct>
+                        <span>D. asas tunai atau cash basis</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 2</span>
+                <p class="question-text">Metode akuntansi yang banyak digunakan dalam praktik perusahaan adalah ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q2" value="A">
+                        <span>A. tunai</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="B">
+                        <span>B. asas tunai</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="C">
+                        <span>C. tunai atau akrual</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="D" data-correct>
+                        <span>D. waktu atau tunai</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 3</span>
+                <p class="question-text">Daftar saldo pada akhir periode akuntansi sering kali belum mencerminkan saldo yang sesungguhnya, hal ini terjadi karena ada transaksi yang ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q3" value="A">
+                        <span>A. cukup rumit untuk mencatat setiap transaksi</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="B">
+                        <span>B. frekuensi dari transaksi dalam perusahaan cukup tinggi</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="C" data-correct>
+                        <span>C. adanya transaksi tertentu terjadi secara kontinu</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="D">
+                        <span>D. belum dapat dicatat dari sisi pencatatan</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 4</span>
+                <p class="question-text">Akun-akun yang berada dalam daftar saldo belum dapat langsung disajikan dalam laporan keuangan namun perlu dilakukan suatu proses tertentu, proses ini disebut ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q4" value="A">
+                        <span>A. memindahkan atau mem-posting</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="B" data-correct>
+                        <span>B. penyesuaian atau adjustment</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="C">
+                        <span>C. memasukkan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="D">
+                        <span>D. mentabpas</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 5</span>
+                <p class="question-text">Akun/perkiraan di bawah ini yang bukan merupakan akun/perkiraan yang menpandang elemen-elemen neraca saldo adalah ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q5" value="A">
+                        <span>A. bahan habis pakai</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q5" value="B">
+                        <span>B. iklan asuransi</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q5" value="C">
+                        <span>C. pendapatan yang diterima di muka</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q5" value="D" data-correct>
+                        <span>D. pendapatan akrua atau teban</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 6</span>
+                <p class="question-text">Dalam neraca saldo terdapat akun perlengkapan kantor sebesar Rp750.000,00. Nilai perlengkapan yang masih ada Rp250.000,00. Jurnal penyesuaiannya adalah ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q6" value="A">
+                        <span>A. Beban perlengkapan akun perlengkapan Rp500.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q6" value="B" data-correct>
+                        <span>B. Beban perlengkapan akun bertambah Rp500.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q6" value="C">
+                        <span>C. Beban perlengkapan akun berkurang Rp250.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q6" value="D">
+                        <span>D. Beban perlengkapan akun bertambah Rp250.000,00</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 7</span>
+                <p class="question-text">Perusahaan menyewakan kantor untuk laba pada tanggal 1 Agustus dan menerima pendapatan Rp6.000.000,00 untuk masa 1 tahun. Sampai akhir tahun, memeriksa jurnal penyesuaian di akhir Desember dan berpengajap pada ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q7" value="A" data-correct>
+                        <span>A. Pendapatan di debet Rp2.500.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q7" value="B">
+                        <span>B. Pendapatan diterima di muka bertambah Rp6.000.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q7" value="C">
+                        <span>C. Pendapatan diterima di muka berkurang Rp3.500.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q7" value="D">
+                        <span>D. Pendapatan diterima di muka dikedit Rp2.500.000,00</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 8</span>
+                <p class="question-text">Pada awal Desember dibayar persekot asuransi Rp600.000,00 untuk masa 3 bulan. Jurnal penyesuaiannya pada ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q8" value="A" data-correct>
+                        <span>A. Beban asuransi bertambah (D) Rp200.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q8" value="B">
+                        <span>B. Beban asuransi bertambah (D) Rp400.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q8" value="C">
+                        <span>C. Persekot asuransi bertambah (D) Rp100.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q8" value="D">
+                        <span>D. Persekot asuransi berkurang (K) Rp200.000,00</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 9</span>
+                <p class="question-text">Jurnal penyesuaian untuk perlengkapan (bahan habis pakai) senilai ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q9" value="A" data-correct>
+                        <span>A. Perlengkapan yang telah digunakan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q9" value="B">
+                        <span>B. Perlengkapan yang dibeli</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q9" value="C">
+                        <span>C. Perlengkapan yang terdapat di neraca saldo</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q9" value="D">
+                        <span>D. Tidak ada jawaban yang benar</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 10</span>
+                <p class="question-text">Bagian dari harga perolehan aktiva tetap yang dibebankan pada periode akuntansi disebut ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q10" value="A">
+                        <span>A. penyusutan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q10" value="B">
+                        <span>B. Pemeranan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q10" value="C">
+                        <span>C. Pembelasan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q10" value="D"data-correct>
+                        <span>D. Depresiasi</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 11</span>
+                <p class="question-text">Diketahui harga perolehan peralatan kantor Rp10.000.000,00 dengan nilai residu Rp4.000.000,00 dan masa manfaat 5 tahun. Besar biaya depresiasi per bulan dengan menggunakan metode depresiasi garis lurus adalah ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q11" value="A">
+                        <span>A. Rp600.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q11" value="B">
+                        <span>B. Rp500.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q11" value="C">
+                        <span>C. Rp300.000,00</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q11" value="D" data-correct>
+                        <span>D. Rp100.000,00</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 12</span>
+                <p class="question-text">Penyesuaian yang terjadi karena adak terjadi hanya dalam perusahaan, tetapi belum dicatat sampai tanggal neraca dilakukan pada ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q12" value="A">
+                        <span>A. Bertambahnya pendapatan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q12" value="B">
+                        <span>B. Berkurangnya pendapatan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q12" value="C" data-correct>
+                        <span>C. Bertambahnya biaya</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q12" value="D">
+                        <span>D. Tidak ada perubahan</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 13</span>
+                <p class="question-text">Asumsi periode waktu menyatakan bahwa ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q13" value="A">
+                        <span>A. penukaran harus disebut dalam periode pada waktu pendapatan diperoleh bukan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q13" value="B">
+                        <span>B. biaya harus dibukukan dengan pendapatan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q13" value="C" data-correct>
+                        <span>C. umur ekonomis dari suatu badan usaha dapat dibagi menjadi periode waktu buatan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q13" value="D">
+                        <span>D. tahun fiskal harus sesuai dengan tahun kalender</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 14</span>
+                <p class="question-text">Setiap kelompok akun berikut keuntungan besar atau mengalami penyesuaian, kecuali ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q14" value="A">
+                        <span>A. pendapatan biaya</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q14" value="B">
+                        <span>B. pendapatan diterima di muka</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q14" value="C">
+                        <span>C. biaya yang tertunggak</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q14" value="D" data-correct>
+                        <span>D. penjualan</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 15</span>
+                <p class="question-text">Prinsip atau asumsi yang membandingkan antara usaha (biaya) dengan hasil (pendapatan) adalah ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q15" value="A" data-correct>
+                        <span>A. prinsip matching</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q15" value="B">
+                        <span>B. asumsi cost</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q15" value="C">
+                        <span>C. prinsip periode waktu</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q15" value="D">
+                        <span>D. prinsip penyusunan pendapatan</span>
+                    </label>
+                </div>
+                <button class="submit-btn" onclick="checkQuiz('subStage2_2_content')">Periksa Jawaban ✓</button>
+                <button class="reset-btn" onclick="resetQuiz('subStage2_2_content')">Ulangi Tahap Ini ↻</button>
+                <div id="result_subStage2_2_content" class="result"></div>
             </div>
         </div>
     </div>
