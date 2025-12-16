@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Laboratorium Pengantar Akutansi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="pengantarAkutansi.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✿ Modul UT Laboratorium Pengantar Akutansi ✿</h1>
+            <p class="subtitle">EKMA4115</p>
+        </div>
+        
+        <nav class="nav-container">
+            <a href="index.html"><button class="stage-btn">Matkul Lainnya</button></a>
+            <button class="stage-btn active" onclick="showStage(1)">Modul 1</button>
+            <button class="stage-btn" onclick="showStage(2)">Modul 2</button>
+            <button class="stage-btn" onclick="showStage(3)">Modul 3</button>
+            <button class="stage-btn" onclick="showStage(4)">Modul 4</button>
+            <button class="stage-btn" onclick="showStage(5)">Modul 5</button>
+            <button class="stage-btn" onclick="showStage(6)">Modul 6</button>
+        </nav>
+
+        <div class="content">
+            <div id="stage1" class="stage active">
+                
+                <h2 class="stage-title">Pendahuluan Laboratorium Pengantar Akutansi</h2>
+
+                <nav class="sub-nav-container">
+                    <button class="stage-btn active" onclick="showSubStage1(99, this)">Pendahuluan</button>
+                    <button class="stage-btn" onclick="showSubStage1(1, this)">Modul 1 Sub 1</button>
+                    <button class="stage-btn" onclick="showSubStage1(2, this)">Modul 1 Sub 2</button>
+                </nav>
+            
+            <div id="subStage1_99_content" class="sub-stage-content" style="display:flex;">
+                <div class="summary">
+                    <h3>Pendahuluan 📝</h3>
+                    <ul>
+                        <li>Mata kuliah Laboratorium Pengantar Akuntansi (EACC4102) merupakan salah satu mata kuliah inti dalam mempelajari Ilmu Akuntansi.
+                       </li>
+                        <li>Mata kuliah ini bertujuan untuk membantu mahasiswa dalam mempelajari dan berpraktik secara langsung menyusun laporan keuangan badan sesuai siklus akuntansi dan prinsip akuntansi yang berlaku umum (PABU).
+                        </li>
+                        <li>Mata kuliah ini dapat dipelajari secara pararel dengan MK Pengantar Akuntansi pada semester yang sama. Namun sangat dianjurkan untuk mengambil mata kuliah Pengantar Akuntansi sebelum mengambil mata kuliah ini.
+                        </li>
+                        <li>Capaian kompetensi mata kuliah ini diukur melalui kegiatan praktik tutorial dengan mengerjakan 8 tugas tutorial yang bersifat serial, dan juga ujian akhir semester (UAS) di akhir masa tutorial.</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="subStage1_1_content" class="sub-stage-content" style="display:none;">
+                <div class="summary">
+                    <h3>Ringkasan Materi Sub 1 (Pendahuluan Akutansi)📝</h3>
+                    <ul>
+                        <li>Akuntansi adalah pengukuran, penjabaran, atau pemberian kepastian mengenai informasi yang akan membantu manajer, investor, otoritas pajak dan pembuat keputusan lain untuk membuat alokasi sumber daya keputusan di dalam perusahaan, organisasi nonprofit, dan lembaga pemerintah.
+                        </li>
+                        <li>Akuntansi adalah seni dalam mengukur, berkomunikasi, dan menginterpretasikan aktivitas keuangan. Secara luas, akuntansi juga dikenal sebagai bahasa bisnis. Akuntansi bertujuan untuk menyiapkan suatu laporan keuangan yang akurat agar dapat dimanfaatkan oleh para manajer, pengambil kebijakan, dan pihak berkepentingan lainnya, seperti pemegang saham, kreditur, atau pemilik
+                        </li>
+                        <li>Setelah dikumpulkan beberapa pengertian akuntansi dari berbagai pakar. Pada prinsipnya semua mengarah kepada 1 poin penting, yaitu proses mencatat transaksi keuangan di masa lalu, mengelompokkan, dan mengklasifikasi. Kemudian menyajikannya dalam laporan keuangan yang nantinya akan berguna bagi pihak internal, yaitu manajemen untuk pengelolaan perusahaan serta bagi pihak eksternal yang berkepentingan dengan perusahaan.
+                        </li>
+                        <li>Dari perspektif akuntansi, berikut adalah berbagai macam jenis usaha dan salah satunya dapat dikelompokkan berdasarkan pendekatan output.
+                        </li>
+                        <li>1.Perusahaan yang aktivitas operasinya menjual barangAktivitas utama perusahaan ini adalah membeli dan menjual kembali barang yang dibelinya dengan tujuan mencari keuntungan/laba, contohnya grosir, pengekspor, importir, distributor, agen, dan pengecer.</li>
+                        <li>
+                        2.Perusahaan yang aktivitas operasinya menghasilkan jasa
+                        Aktivitas utama perusahaan ini adalah menyediakan pelayanan jasa kepada konsumen yang membutuhkan, contohnya bengkel mobil, perusahaan asuransi, dan bank.
+                        </li>
+                        <li>
+                        3.Perusahaan yang aktivitas operasinya kombinasi dari pengadaan, pengumpulan, pengolahan, dan penyaluran distribusi disebut dengan perusahaan manufaktur.
+                        </li>
+                    </ul>
+                </div>
+                <!-- Soal 1 -->
+                <div class="question-card">
+                <span class="question-number">Soal 1</span>
+                <p class="question-text">Jenis usaha yang cenderung tidak ada transaksi pembelian adalah perusahaan ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q1" value="A" data-correct>
+                        <span>A. jasa</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="B">
+                        <span>B. manufaktur</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="C">
+                        <span>C. tidak ada jawaban yang benar</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="D">
+                        <span>D. barang</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 2</span>
+                <p class="question-text">Jenis usaha yang memiliki prosedur akuntansi biaya adalah ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q2" value="A">
+                        <span>A. tidak ada jawaban yang benar</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="B">
+                        <span>B. barang</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="C">
+                        <span>C. jasa</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="D" data-correct>
+                        <span>D. manufaktur</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 3</span>
+                <p class="question-text">Setelah dibuatkan peerpesaraan, tahap selanjutnya dalam siklus akuntansi adalah ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q3" value="A">
+                        <span>A. pencatatan bukti transaksi</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="B">
+                        <span>B. jurnal penyesuaian</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="C">
+                        <span>C. penyusunan laporan keuangan</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="D" data-correct>
+                        <span>D. <i>posting</i> ke buku besar</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 4</span>
+                <p class="question-text">Persamaan dasar akuntansi adalah ...</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q4" value="A">
+                        <span>A. liabilitas = aset + ekuitas</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="B">
+                        <span>B. aset = liabilitas + ekuitas</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="C">
+                        <span>C. aset = liabilitas – ekuitas</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q4" value="D" data-correct>
+                        <span>D. aset = ekuitas + liabilitas</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-number">Soal 5</span>
+                <p class="question-text">Manakah dari pernyataan berikut ini yang benar mengenai neraca?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q5" value="A" data-correct>
+                        <span>A. Aset umumnya disajikan di neraca dalam urutan likuiditas.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q5" value="B">
+                        <span>B. Aset akan sama dengan di neraca memasukkan pendapatan dan beban.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q5" value="C">
+                        <span>C. Neraca menunjukkan kinerja keuangan suatu perusahaan selama periode waktu tertentu.</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q5" value="D">
+                        <span>D. Neraca biasanya dimunculkan dengan mengesefkan aset atau melebihkan liabilitas tersajinya.</span>
+                    </label>
+                </div>
+            </div>
+            </div>
+    </div>
+</body>
+</html>
