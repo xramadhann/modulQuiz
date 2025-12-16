@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modul Laboratorium Pengantar Akutansi</title>
     <link rel="stylesheet" href="style.css">
-    <script src="pengantarAkutansi.js" defer></script>
+    <script src="labAkutansi.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -185,8 +185,11 @@
                         <span>D. Neraca biasanya dimunculkan dengan mengesefkan aset atau melebihkan liabilitas tersajinya.</span>
                     </label>
                 </div>
+                <button class="submit-btn" onclick="checkQuiz('subStage1_1_content')">Periksa Jawaban ✓</button>
+                <button class="reset-btn" onclick="resetQuiz('subStage1_1_content')">Ulangi Tahap Ini ↻</button>
+                <div id="result_subStage1_1_content" class="result"></div>
             </div>
-            </div>
+        </div>
     </div>
 </body>
 </html>
